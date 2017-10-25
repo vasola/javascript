@@ -1,0 +1,27 @@
+<!-- Dentro del siguiente archivo se encuentra una calculadora
+que no está completa. El botón = funciona evaluando la expresión
+que se encuentra en el input.
+Se requiere ingresar todos los otros botones de la calculadora
+para que modifiquen el input agregando su valor.
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <input type="text" name="calculator" value="">
+    <button class="btn" type="button" name="button">1</button>
+    <button class="btn" type="button" name="button">+</button>
+    <button class="result" type="button" name="result">=</button>
+    <script type="text/javascript">
+      var result = document.getElementsByName("result")[0];
+      var calculator = document.getElementsByName("calculator")[0];
+      result.onclick = function(){
+        calculator.value = eval(calculator.value)
+      }
+    </script>
+  </body>
+</html>
